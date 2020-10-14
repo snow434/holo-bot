@@ -2,7 +2,11 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = (client, oldMessage, newMessage) => {
 
+    // Avoid error: "MessageEmbed field values may not be empty." 
+    // Event messageUpdate gets triggered on every MessageEmbed post.
+    // This prevents the function from running again and referring to no longer existing oldMessage.
     if (oldMessage.author.bot) return;
+
     const logEntry = new MessageEmbed()
         .setTitle("Event: Edited message")
         .setColor("Yellow")
@@ -14,9 +18,9 @@ module.exports = (client, oldMessage, newMessage) => {
         .addField("Edited at:", `${newMessage.createdAt}`)
         .setFooter("Holo-bot");
 
-    const logChannel = oldMessage.guild.channels.cache.find(channel => channel.name === "log");
+    const logChannel = oldMessage.guild.channels.cache.find(channel => channel.name === "audit-log");
     if (!logChannel) 
-        console.log(`Log channel not defined or not found.`);
+        console.log(`Audit log channel not defined or not found.`);
     if (oldMessage.content != newMessage.content) {
         logChannel.send(logEntry);
     } else {

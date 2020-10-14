@@ -12,8 +12,12 @@ module.exports = (client, message) => {
         .addField("Deleted at:", `${message.createdAt}`)
         .setFooter("Holo-bot");
 
-    const logChannel = message.guild.channels.cache.find(channel => channel.name === "log");
-    if (!logChannel) return;
+    const logChannel = message.guild.channels.cache.find(channel => channel.name === "audit-log");
+    if (!logChannel) {
+        console.log(`Audit log channel not defined or not found.`);
+    } else {
+        logChannel.send(logEntry);
+    }
 
     logChannel.send(logEntry);
 
