@@ -1,0 +1,10 @@
+{
+    "name": "holo-bot",
+    "version": "0.1.0",
+    "description": "Simple bot to help with discord server management",
+    "main": "app.js",
+    "author": "snow#9648",
+    "dependencies": {
+        "discord.js": "^12.3.1"   
+    }
+ }
