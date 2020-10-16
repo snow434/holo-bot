@@ -6,5 +6,10 @@
     "author": "snow#9648",
     "dependencies": {
         "discord.js": "^12.3.1"   
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/snow434/holo-bot.git"
+    },
+    "license": "GPL-3.0"
  }
