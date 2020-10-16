@@ -48,6 +48,8 @@ node app.js
 ```
 or alternatively use PM2 (recommended)<br> https://discordjs.guide/improving-dev-environment/pm2.html#installation
 
+To disable/enable events and commands drag the .js files between -enabled/-disabled folders.
+
 ## TODO
 Planned features:
 * Rest of discord.js API Events
