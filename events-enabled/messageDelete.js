@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const { config } = require("../app");
 
 module.exports = (client, message) => {
 
