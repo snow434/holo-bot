@@ -20,7 +20,7 @@ Pre requisites `nodejs >= 12.0, npm`
 <br>
 Clone git repository
 ```
-https://github.com/snow434/holo-bot.git
+git clone https://github.com/snow434/holo-bot.git
 ```
 Run
 ```
