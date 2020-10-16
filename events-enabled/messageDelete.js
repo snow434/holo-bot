@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const { config } = require("../app");
 
 module.exports = (client, message) => {
 
@@ -12,13 +13,11 @@ module.exports = (client, message) => {
         .addField("Deleted at:", `${message.createdAt}`)
         .setFooter("Holo-bot");
 
-    const logChannel = message.guild.channels.cache.find(channel => channel.name === "audit-log");
+    const logChannel = message.guild.channels.cache.find(channel => channel.name === client.config.auditChannel);
     if (!logChannel) {
         console.log(`Audit log channel not defined or not found.`);
     } else {
         logChannel.send(logEntry);
     }
-
-    logChannel.send(logEntry);
 
 };

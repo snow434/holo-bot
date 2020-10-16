@@ -9,7 +9,7 @@ module.exports = (client, message) => {
         // Make client ignore its own or other clients messages.
         if (message.channel.type === "dm" || message.author.bot || !message.content.startsWith(client.config.prefix)) return;                              
         
-        if (!message.member.roles.cache.some(role => role.name === 'Admin')) {                                                 
+        if (!message.member.roles.cache.some(role => role.name === client.config)) {                                                 
             try {
                 client.commands.get(command).execute(client, message, args);
             } catch (error) {

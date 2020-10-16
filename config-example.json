@@ -1,4 +1,7 @@
 {
 	"prefix": "!",
-	"token": "your-token-here"
+	"token": "your-token-here",
+	"auditChannel": "audit-log",
+	"adminRoleNames": ["Admin", "Administrator", "Owner"],
+	"moderatorRoleNames": ["Mod", "Moderator"]
 }
