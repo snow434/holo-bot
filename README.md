@@ -20,7 +20,7 @@ Pre requisites `nodejs >= 12.0, npm`
 <br>
 Clone git repository
 ```
-https://github.com/snow434/holo-bot.git
+git clone https://github.com/snow434/holo-bot.git
 ```
 Run
 ```
@@ -47,6 +47,8 @@ Once you finish setting up config.json start the bot with
 node app.js
 ```
 or alternatively use PM2 (recommended)<br> https://discordjs.guide/improving-dev-environment/pm2.html#installation
+
+To disable/enable events and commands drag the .js files between -enabled/-disabled folders.
 
 ## TODO
 Planned features:
