@@ -1,0 +1,12 @@
+0.2.0
+ - Ability to set log channel name in config file
+ - Ability to define priviliged roles in config file
+ - Handle guildMemberAdd/Remove/Update events
+ - Fixed a bug in messageDelete.js
+ - Updated config example
+
+0.1.1
+ - Bug fixes
+ 
+0.1.0
+ - Initial release
