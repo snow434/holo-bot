@@ -2,6 +2,7 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = (client, message) => {
 
+    if (message.author.bot) return;
     const logEntry = new MessageEmbed()
         .setTitle("Event: Deleted message")
         .setColor('#FF0000')
