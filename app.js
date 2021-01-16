@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const config = require('./config.json')
 const fs = require("fs");
-const client = new Discord.Client({ disableEveryone: true });
+const client = new Discord.Client({ disableMentions: 'everyone' });
 
 client.config = config;
 client.auditChannel = config["audit-channel"];
@@ -27,11 +27,6 @@ for (const file of eventFiles) {
     client.on(eventName, event.bind(null, client));
     console.log(eventName)
 }
-
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity("over you.", { type: `WATCHING` });
-});
 
 client.login(config.token);
 
