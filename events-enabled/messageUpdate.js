@@ -10,7 +10,7 @@ module.exports = (client, oldMessage, newMessage) => {
     const logEntry = new MessageEmbed()
         .setTitle("Event: Edited message")
         .setColor("Yellow")
-        .setThumbnail(oldMessage.author.avatarURL())
+        .setThumbnail(oldMessage.author.displayAvatarURL({ dynamic: true }))
         .addField("Message author:", `${oldMessage.author}`)
         .addField("Message content before:", `${oldMessage.content}`)
         .addField("Message content after:", `${newMessage.content}`)
@@ -19,11 +19,12 @@ module.exports = (client, oldMessage, newMessage) => {
         .setFooter("Holo-bot");
 
     const logChannel = oldMessage.guild.channels.cache.find(channel => channel.name === client.config.auditChannel);
-    if (!logChannel) 
+    if (!logChannel)
         console.log(`Audit log channel not defined or not found.`);
     if (oldMessage.content != newMessage.content) {
         logChannel.send(logEntry);
     } else {
         return;
     }
+
 };

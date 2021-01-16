@@ -5,7 +5,7 @@ module.exports = (client, member) => {
     const logEntry = new MessageEmbed()
         .setTitle("Event: User left the server")
         .setColor("Yellow")
-        .setThumbnail(member.user.avatarURL())
+        .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
         .addField("Username:", `Nickname: ${member.nickname} \nDiscord tag: @${member.user.tag}`)
         .setTimestamp()
         .setFooter("Holo-bot");

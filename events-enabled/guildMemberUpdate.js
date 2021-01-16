@@ -6,7 +6,7 @@ module.exports = (client, oldMember, newMember) => {
     const logEntry = new MessageEmbed()
         .setTitle("Event: User nickname change")
         .setColor("Yellow")
-        .setThumbnail(oldMember.user.avatarURL())
+        .setThumbnail(oldMember.user.displayAvatarURL({ dynamic: true }))
         .addField("Before:", `Nickname: ${oldMember.nickname} \nDiscord tag: @${oldMember.user.tag}`)
         .addField("After:", `Nickname: ${newMember.nickname} \nDiscord tag: @${oldMember.user.tag}`)
         .setTimestamp()

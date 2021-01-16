@@ -5,7 +5,7 @@ module.exports = (client, message) => {
     const logEntry = new MessageEmbed()
         .setTitle("Event: Deleted message")
         .setColor('#FF0000')
-        .setThumbnail(message.author.avatarURL())
+        .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
         .addField("Message author:", `${message.author.tag}`)
         .addField("Message content:", `${message.content}`)
         .addField("Deleted in:", `${message.channel}`)
