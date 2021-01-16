@@ -13,7 +13,8 @@ Currently in early development stage.
 - Track username and discord tag changes.
 - TBD
 ### Commands
-- TBD
+- Kick
+- Ban
   
 ## Installation
 Pre requisites `nodejs >= 12.0, npm`  

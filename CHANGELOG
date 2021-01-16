@@ -1,3 +1,8 @@
+0.3.0
+ - Added ban and kick command
+ - Added ability to configure bot status
+ - Better error handling
+ - Fixed bugs
 0.2.0
  - Ability to set log channel name in config file
  - Ability to define priviliged roles in config file

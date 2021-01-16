@@ -1,6 +1,6 @@
 {
     "name": "holo-bot",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "Simple bot to help with discord server management",
     "main": "app.js",
     "author": "snow#9648",
