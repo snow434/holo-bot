@@ -1,3 +1,7 @@
+0.3.1
+ - Added invite creation and deletion logging
+ - Added channel creation and deletion logging
+
 0.3.0
  - Added ban and kick command
  - Added ability to configure bot status
