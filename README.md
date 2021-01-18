@@ -37,11 +37,12 @@ Replace `"token": "your-token-here"` with your own.
 	"prefix": "!",
 	"token": "your-token-here",
 	"auditChannel": "audit-log",
-	"adminRoleNames": ["Admin", "Administrator", "Owner"],
-	"moderatorRoleNames": ["Mod", "Moderator"]
+	"roles": ["Admin", "Administrator", "Owner", "Mod", "Moderator"],
+	"botStatus": "over you",
+	"botStatusType": "WATCHING"
 }
 ```
-Optionally adjust `auditChannel` and `adminRoleNames, moderatorRoleNames` according to your server settings.
+Optionally adjust `auditChannel` and `roles` according to your server settings.
 
 Once you finish setting up config.json start the bot with
 ```
