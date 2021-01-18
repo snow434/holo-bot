@@ -1,3 +1,7 @@
+0.3.2
+ - Fixed role checking
+ - Added information on which servers the bot is online
+
 0.3.1
  - Added invite creation and deletion logging
  - Added channel creation and deletion logging
