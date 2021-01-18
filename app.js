@@ -5,9 +5,12 @@ const client = new Discord.Client({ disableMentions: 'everyone' });
 
 client.config = config;
 client.auditChannel = config["audit-channel"];
-client.adminRoleNames= config.adminRoleNames;
-client.moderatorRoleNames = config.moderatorRoleNames;
 
+// Load priviliged role names
+const rolesJSON = JSON.parse(JSON.stringify(config));
+client.roles = rolesJSON.roles;
+
+// Load all commands from /commands-enabled
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands-enabled').filter(file => file.endsWith('.js'));
 console.log(`Loading enabled commands: `);
@@ -17,6 +20,7 @@ for (const file of commandFiles) {
     console.log(command.name);
 }
 
+// Load all event handlers from /events-enabled
 // Event file name must be the same as the name of the event defined in discord.js API.
 client.events = new Discord.Collection();
 const eventFiles = fs.readdirSync('./events-enabled').filter(file => file.endsWith('.js'));
