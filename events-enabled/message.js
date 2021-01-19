@@ -4,11 +4,10 @@ module.exports = (client, message) => {
     const command = args.shift().toLowerCase();
 
     // Do not respond to direct messages.
-    // Respond to commands comming only from defined roles
     // Respond only to messages starting with "!" ex. !help
-    // Make client ignore its own or other clients messages.
+    // Make bot ignore its own or other bots messages.
     if (message.channel.type === "dm" || message.author.bot || !message.content.startsWith(client.config.prefix)) return;
-
+    // Respond to commands comming only from defined roles
     if (message.member.roles.cache.some(role =>(client.roles).includes(role.name))) {
         try {
             client.commands.get(command).execute(client, message, args);
