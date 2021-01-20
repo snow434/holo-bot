@@ -11,7 +11,7 @@ module.exports = (client, oldMember, newMember) => {
             .addField("After:", `Nickname: ${newMember.nickname} - ${newMember.user}`)
             .setTimestamp()
             .setFooter("Holo-bot");
-        const logChannel = newMember.guild.channels.cache.find(channel => channel.name === client.config.auditChannel);
+        const logChannel = newMember.guild.channels.cache.find(channel => channel.name === client.config.auditLogChannel);
         if (!logChannel) {
             console.log(`Audit log channel not defined or not found.`);
         } else {

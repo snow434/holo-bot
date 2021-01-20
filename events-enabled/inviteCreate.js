@@ -13,7 +13,7 @@ module.exports = (client, invite) => {
         .addField("Created at:", `${invite.expiresAt}`)
         .setFooter("Holo-bot");
 
-    const logChannel = invite.guild.channels.cache.find(channel => channel.name === client.config.auditChannel);
+    const logChannel = invite.guild.channels.cache.find(channel => channel.name === client.config.auditLogChannel);
     if (!logChannel) {
         console.log(`Audit log channel not defined or not found.`);
     } else {

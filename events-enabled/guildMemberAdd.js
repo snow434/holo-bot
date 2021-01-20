@@ -11,7 +11,7 @@ module.exports = (client, member) => {
         .setTimestamp()
         .setFooter("Holo-bot");
 
-    const logChannel = member.guild.channels.cache.find(channel => channel.name === client.config.auditChannel);
+    const logChannel = member.guild.channels.cache.find(channel => channel.name === client.config.auditLogChannel);
     if (!logChannel) {
         console.log(`Audit log channel not defined or not found.`);
     } else {
