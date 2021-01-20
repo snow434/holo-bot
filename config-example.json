@@ -1,7 +1,8 @@
 {
 	"prefix": "!",
 	"token": "your-token-here",
-	"auditChannel": "audit-log",
+	"auditLogChannel": "audit-log",
+	"messageLogChannel": "message-log",
 	"roles": ["Admin", "Administrator", "Owner", "Mod", "Moderator"],
 	"botStatus": "over you",
 	"botStatusType": "WATCHING"

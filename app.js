@@ -4,7 +4,8 @@ const fs = require("fs");
 const client = new Discord.Client({ disableMentions: 'everyone' });
 
 client.config = config;
-client.auditChannel = config["audit-channel"];
+client.auditLogChannel = config["auditLogChannel"];
+client.messageLogChannel = config["messageLogChannel"];
 
 // Load priviliged role names
 const rolesJSON = JSON.parse(JSON.stringify(config));

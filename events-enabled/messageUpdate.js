@@ -18,9 +18,9 @@ module.exports = (client, oldMessage, newMessage) => {
         .addField("Edited at:", `${newMessage.createdAt}`)
         .setFooter("Holo-bot");
 
-    const logChannel = oldMessage.guild.channels.cache.find(channel => channel.name === client.config.auditChannel);
+    const logChannel = oldMessage.guild.channels.cache.find(channel => channel.name === client.config.messageLogChannel);
     if (!logChannel)
-        console.log(`Audit log channel not defined or not found.`);
+        console.log(`Message log channel not defined or not found.`);
     if (oldMessage.content != newMessage.content) {
         logChannel.send(logEntry);
     } else {
