@@ -6,7 +6,7 @@ module.exports = (client, member) => {
         .setTitle("Event: User left the server")
         .setColor("Yellow")
         .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
-        .addField("Username:", `Nickname: ${member.nickname} \nDiscord tag: @${member.user}`)
+        .addField("Username:", `Nickname: ${member.nickname} \nDiscord tag: ${member.user}`)
         .setTimestamp()
         .setFooter("Holo-bot");
 
