@@ -7,7 +7,7 @@ module.exports = (client, message) => {
         .setTitle("Event: Deleted message")
         .setColor('#FF0000')
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
-        .addField("Message author:", `${message.author.tag}`)
+        .addField("Message author:", `${message.author}`)
         .addField("Message content:", `${message.content}`)
         .addField("Deleted in:", `${message.channel}`)
         .addField("Deleted at:", `${message.createdAt}`)

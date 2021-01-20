@@ -7,8 +7,8 @@ module.exports = (client, oldMember, newMember) => {
             .setTitle("Event: User nickname change")
             .setColor("Yellow")
             .setThumbnail(oldMember.user.displayAvatarURL({ dynamic: true }))
-            .addField("Before:", `Nickname: ${oldMember.nickname} - ${oldMember.user.tag}`)
-            .addField("After:", `Nickname: ${newMember.nickname} - ${newMember.user.tag}`)
+            .addField("Before:", `Nickname: ${oldMember.nickname} - ${oldMember.user}`)
+            .addField("After:", `Nickname: ${newMember.nickname} - ${newMember.user}`)
             .setTimestamp()
             .setFooter("Holo-bot");
         const logChannel = newMember.guild.channels.cache.find(channel => channel.name === client.config.auditChannel);
