@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const config = require('./config.json')
 const fs = require("fs");
+const { aliases } = require('./commands-enabled/commands');
 const client = new Discord.Client({ disableMentions: 'everyone' });
 
 client.config = config;
@@ -18,6 +19,12 @@ console.log(`Loading enabled commands: `);
 for (const file of commandFiles) {
     const command = require(`./commands-enabled/${file}`);
     client.commands.set(command.name, command);
+    // load command aliases
+    if(command.aliases) {
+        command.aliases.forEach(alias => {
+            client.commands.set(alias, command);
+        });
+    }
     console.log(command.name);
 }
 
