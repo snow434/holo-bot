@@ -1,3 +1,11 @@
+0.4.0
+ - Fix usernames not being clickable in some messageEmbeds
+ - Added ability to define separate channels for messageUpdate, messageDelete events
+ - Added ability to specify the ban/kick reason
+ - Bot will now DM the user with the ban/kick reason
+ - Added support for command aliases
+ - Fixed bugs
+
 0.3.2
  - Fixed role checking
  - Added information on which servers the bot is online
@@ -11,6 +19,7 @@
  - Added ability to configure bot status
  - Better error handling
  - Fixed bugs
+
 0.2.0
  - Ability to set log channel name in config file
  - Ability to define priviliged roles in config file
