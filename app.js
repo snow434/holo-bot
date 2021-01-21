@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const config = require('./config.json')
 const fs = require("fs");
-const { aliases } = require('./commands-enabled/commands');
 const client = new Discord.Client({ disableMentions: 'everyone' });
 
 client.config = config;
