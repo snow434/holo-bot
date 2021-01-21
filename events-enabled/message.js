@@ -10,7 +10,8 @@ module.exports = (client, message) => {
     // Respond to commands comming only from defined roles
     if (message.member.roles.cache.some(role =>(client.roles).includes(role.name))) {
         try {
-            client.commands.get(command).execute(client, message, args);
+            if(client.commands.has(command))
+                client.commands.get(command).execute(client, message, args);
         } catch (error) {
             console.error(error);
             message.reply("There was an error while trying to execute that command!")
