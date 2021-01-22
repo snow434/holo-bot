@@ -7,10 +7,10 @@ module.exports = (client, message) => {
     // Respond only to messages starting with "!" ex. !help
     // Make bot ignore its own or other bots messages.
     if (message.channel.type === "dm" || message.author.bot || !message.content.startsWith(client.config.prefix)) return;
+    if (!client.commands.has(command)) return;
     // Respond to commands comming only from defined roles
-    if (message.member.roles.cache.some(role =>(client.roles).includes(role.name))) {
-        try {
-            if(client.commands.has(command))
+    if (message.member.roles.cache.some(role => (client.roles).includes(role.name))) {
+        try { 
                 client.commands.get(command).execute(client, message, args);
         } catch (error) {
             console.error(error);
